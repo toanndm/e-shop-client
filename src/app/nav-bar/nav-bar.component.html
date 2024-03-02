@@ -1,0 +1,41 @@
+<nav class="flex flex-row justify-between items-center relative border-b-2 border-gray-300 pb-4">
+    <div class="logo basis-2/6 text-center text-xl font-semibold cursor-pointer">
+        EShop.
+    </div>
+    <ul [ngClass]="{'hidden': !isMenuOpen, 'ct-top-menu-expanded': isMenuOpen}" class="basis-2/6 lg:flex items-center justify-center gap-8 text-sm uppercase text-gray-500 font-medium">
+        <li routerLinkActive="active" class="ct-top-menu-item">
+            <a routerLink="/" class="">Home</a>
+        </li>
+        <li routerLinkActive="active" class="ct-top-menu-item">
+            <a routerLink="/shop" class="">Shop</a>
+        </li>
+        <li routerLinkActive="active" class="ct-top-menu-item">
+            <a routerLink="/blog" class="">Blog</a>
+        </li>
+        <li routerLinkActive="active" class="ct-top-menu-item">
+            <a routerLink="/about" class="">About</a>
+        </li>
+        <li routerLinkActive="active" class="ct-top-menu-item">
+            <a routerLink="/contact" class="">Contact</a>
+        </li>
+    </ul>
+    <ul class="basis-2/6 flex justify-end items-center uppercase sm:mx-8 gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500 font-medium">
+        <li class="ct-top-menu-item">
+            <a href="#" class="relative group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+                <div class="absolute top-0 right-6">
+                    <p class="flex h-0.5 w-0.5 items-center justify-center rounded-full bg-slate-400 group-hover:bg-slate-800 p-2.5 text-sm text-white">3</p>
+                </div>
+            </a>
+        </li>
+        <li class="ct-top-menu-item hidden sm:flex">Login</li>
+        <li class="ct-top-menu-item hidden sm:flex lg:mr-6">Sign up</li>
+        <li (click)="toggleMenu()" class="lg:hidden cursor-pointer mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </li>
+    </ul>
+</nav>
